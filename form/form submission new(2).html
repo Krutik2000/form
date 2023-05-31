@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two-Column Section with Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        .section {
+            display: flex;
+        }
+
+        .column {
+            flex: 1;
+            margin: 30px 7.5px;
+            padding: 10px;
+            height: 80%;
+            box-sizing: border-box;
+            
+        }
+        .column1 
+        {
+           flex: 1;
+            display: flex;
+            flex-direction: row;margin-top: 30px;
+            margin-left: 7.5px;
+            margin-right: 7.5px;
+            margin-bottom: 7.5px;
+            padding: 6px;
+            
+            height: 224px;
+            box-sizing: border-box;
+            background-color: #606264;
+        }
+    .sub-column 
+        {
+
+    height: 224px;
+    width: 250px;
+
+
+         }
+         .social-icons {
+            
+            display: flex;
+            flex-direction: column;
+            height: 225px;
+            width: 180px;
+            margin-left: 20px;
+        }
+    .icon {
+      
+         width: 10px;
+         height: 10px;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         padding-top: 6px;
+         padding-bottom: 50px;
+         padding-left: 5px;
+         margin-right:px ;
+         margin-bottom:2px;
+         margin-top: px;
+
+         }
+       
+       .column2 h2{
+             margin: 2px;
+             padding: 2px;
+             color: wheat;
+       }
+       .column2 h3{
+        margin:2px;
+             padding: 2px;
+             color: wheat;
+       }
+        .box {
+        margin-top: 0px;
+        margin-left: 0px;
+
+        }
+
+
+
+        .column:first-child {
+            background-color: #606264;
+        }
+
+        .column:last-child {
+            background-color: #606264;
+            display: flex;
+        }
+
+        .column:last-child .sub-column {
+            flex: 1;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .form-group label {
+            width: 70px;
+            background-color: rgb(32, 30, 30);
+            color: white;
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        .form-group input {
+            flex: 1;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px;
+        }
+
+        .captcha {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        body {
+            color: white;
+            background-color:#a8acaf;
+        }
+
+        .submit-button {
+            margin-top: 10px;
+            text-align: right;
+
+        }
+
+        .submit-button input {
+            background-color: black;
+            color: white;
+        }
+
+    
+        
+        .hidden {
+            display: none;
+        }
+        
+        /* 3D Image Effects */
+        .image-container {
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .image-container img {
+            width: 323.20px;
+            max-width: 323.20px;
+            height: 180px;
+            transition: transform 0.5s;
+            border: 2px solid #0e0303;
+            background-color: rgb(105, 102, 102);
+            
+        }
+        
+        .image-container:hover img {
+            transform: rotateY(20deg) scale(1.1);
+            
+        }
+        
+        .tick-mark {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(46, 194, 235, 0.8);
+            border-radius: 50%;
+            display: none;
+        }
+        
+        .image-container.selected .tick-mark {
+            display: block;
+        }
+        
+        /* Image Row */
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: 0px;
+            padding: 0px;
+            height: 180px;
+        }
+        
+        /* Send Mail Button */
+        .send-mail-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
+            background-color:#606264;
+        
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .send-mail-button:hover {
+            background-color:#4e5d6b;
+        }
+      @media(max-width:950px){
+        .section{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+
+    }
+        
+     @media (max-width: 767px) {       
+.section {
+    display: grid;
+    grid-template-rows: auto;
+    width: 658px;
+   }
+#secondSection{
+    display: grid;
+    grid-template-rows: auto;
+    width: fit-content;
+    height:fit-content;
+
+     }
+    
+ .column{
+        display: grid;
+        grid-template-columns: auto
+        
+    }
+    .column1{
+        display: grid;
+        grid-template-columns:auto auto;
+        margin-bottom: 27px;
+        margin-top: -21px;
+        
+        }
+     
+.sub-column{
+        display:grid;
+        grid-template-rows: auto auto;
+        width:109px;
+        margin-bottom: 2px;
+     }   
+.column2{
+        display:grid;
+        grid-template-rows: auto;
+        width:109px;
+        margin-bottom: 2px;
+     }       
+    .social-icons{
+        display: grid;
+        grid-template-columns:auto;
+    }
+    .box{
+         display: grid;
+         grid-template-columns: auto;
+         margin:15px;
+        }
+     .column3{
+        display:grid;
+        grid-template-columns: auto;
+        width: 636px;
+        height: 391px;
+        
+     }   
+    .image-row {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        width: 666px;
+       height: 383px;
+    } 
+    .image-container{
+        display:grid;
+        grid-template-columns:auto auto;
+        width:auto;
+        height:auto;
+    } 
+      }
+
+            
+        
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+            var email;
+            var name;
+        function submitForm(event) {
+            event.preventDefault();
+            name = document.getElementById("name").value;
+            email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            if (name && email && phone) {
+                document.getElementById("secondSection").classList.remove("hidden");
+            } else {
+                alert("Please fill in all the required fields.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="section">
+        <div class="column">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" value="+1" required>
+                </div>
+                <div class="submit-button">
+                    <input type="submit" value="Submit" onclick="submitForm(event)">
+                </div>
+                <div class="captcha">
+                    <div class="g-recaptcha" data-sitekey=" 6LcLqw4mAAAAAOvBcHKwubl6k54xYB7Kvt2SjrlI"></div>
+                </div>
+            </form>
+        </div>
+        <div class="column1">
+            <div class="sub-column" >
+                 <div class="social-icons">
+                    
+                     <div class="icon"><a href="#"><img src="facebook.png"style="width: 50px;"></a><br></div>
+                     <div class="icon"><a href="#"><img src="instagram.png"style="width: 50px;"></a><br></div>
+                    <div class="icon"><a href="#"><img src="pinterest.png"style="width: 50px;"></a></div>
+                
+                </div>
+                 </div> 
+                 <div class="column2">
+                    <div class="box">
+                     <h2>Adapt-a-Website</h2>
+                     <h2>+1206.905.9614</h2>
+                     <h3>info@adaptawebsite.com</h3>
+                     <h2>Montreal,QC</h2>
+                     <h2>Canada</h2>
+                    
+                </div>
+                </div>
+            
+        </div>
+    </div>
+    
+    <div id="secondSection" class="section hidden">
+        <div class="column3" style="background-color:#606264;">
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="unnamed.jpg" alt="Image 1" onclick="selectImage(event)">
+                    <div class="tick-mark"></div>
+                </div>
+                <div class="image-container">
+                    <img src="unnamed (1).jpg" alt="Image 2" onclick="selectImage(event)">
+                    <div class="tick-mark"></div>
+                </div>
+                <div class="image-container">
+                    <img src="unnamed (2).jpg" alt="Image 3" onclick="selectImage(event)">
+                    <div class="tick-mark"></div>
+                </div>
+                <div class="image-container">
+                    <img src="unnamed (3).jpg" alt="Image 4" onclick="selectImage(event)">
+                    <div class="tick-mark"></div>
+                </div>
+            </div>
+            
+            <button class="send-mail-button">Send Mail</button>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+    function imageCheck(event) {
+        var selectedImage = document.querySelector(".image-container.selected img");
+        
+        if (selectedImage) {
+            var imageSrc = selectedImage.src;
+            sendMail(imageSrc);
+        } else {
+            alert("Please select an image before sending the email.");
+        }
+    }
+    function selectImage(event) {
+            var images = document.getElementsByClassName("image-container");
+            for (var i = 0; i < images.length; i++) {
+                images[i].classList.remove("selected");
+            }
+            event.currentTarget.parentElement.classList.add("selected");
+        }
+        var sendMailButton = document.querySelector(".send-mail-button");
+        function sendMail(imageSrc){
+            event.preventDefault();
+            Email.send({
+    SecureToken :  "57793b18-b17a-44c2-9e32-df3064a31258",
+    To : email,
+    From : "nawshadgetmeonline@gmail.com",
+    Subject : "Here is your selected image",
+    Body : "Hi" +name+ ",\n\nHere is you image: \n\n" +imageSrc
+}).then(
+  message => alert(" Email sent successfully !")
+);
+       }
+       sendMailButton.addEventListener("click", sendMail);  
+    </script>
+</body>
+</html>
